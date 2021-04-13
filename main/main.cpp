@@ -1,11 +1,18 @@
+#include <boost/asio.hpp>
 #include <iostream>
-#include <cmath>
-#include <string>
-#include "hello/hello.h"
-#include "world/world.h"
+
+void handler(const boost::system::error_code &ec)
+{
+    std::cout << "5 s." << std::endl;
+}
 
 int main()
 {
-    std::cout<< "this is "<< hello() << world() << std::endl;
-	return 0;
+    boost::asio::io_service io_service;
+    boost::asio::deadline_timer timer(io_service, boost::posix_time::seconds(5));
+    timer.async_wait(handler);
+    io_service.run();
+
+    std::cin.get();
+    return 0;
 }
