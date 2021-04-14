@@ -1,6 +1,9 @@
 include_directories(D:\\vcpkg\\installed\\x86-windows\\include)
+include_directories(.)
 
-set(main_src main.cpp)
+set(main_src 
+    main.cpp
+    )
 add_executable(helloworld ${main_src})
 target_link_libraries(helloworld hello world)
 
