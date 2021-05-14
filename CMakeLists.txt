@@ -1,6 +1,25 @@
-cmake_minimum_required(VERSION 3.0.0)
-project(learncmake VERSION 0.1.0)
+cmake_minimum_required(VERSION 3.5)
+project(learncmake LANGUAGES CXX)
 
+set(CMAKE_PREFIX_PATH "D:\\qt\\5.14.2\\5.14.2\\msvc2017")
+set(CMAKE_INCLUDE_CURRENT_DIR ON)
+
+set(CMAKE_AUTOUIC ON)
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
+
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+#定义exe, lib, dll的安装目录
+set(INSTALL_BIN_PATH ${CMAKE_CURRENT_SOURCE_DIR}/bin)
+
+#设置兼容xp
+#set(CMAKE_GENERATOR_TOOLSET "v140_xp" CACHE STRING "Platform Toolset" FORCE)
+
+set(CMAKE_DEBUG_POSTFIX "d")
+
+#子项目
 add_subdirectory(hello)
 add_subdirectory(world)
 add_subdirectory(main)
