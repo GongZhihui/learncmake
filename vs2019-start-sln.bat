@@ -1,1 +1,1 @@
-start vs2019_build\learn_cmake.sln
+start vs2019_build\learncmake.sln

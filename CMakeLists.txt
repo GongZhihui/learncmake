@@ -1,8 +1,9 @@
 cmake_minimum_required(VERSION 3.5)
 project(learncmake LANGUAGES CXX)
 
-set(CMAKE_PREFIX_PATH "D:\\qt\\5.14.2\\5.14.2\\msvc2017")
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
+
+set(CMAKE_PREFIX_PATH "D:\\qt\\5.14.2\\5.14.2\\msvc2017")
 
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
@@ -20,8 +21,7 @@ set(INSTALL_BIN_PATH ${CMAKE_CURRENT_SOURCE_DIR}/bin)
 set(CMAKE_DEBUG_POSTFIX "d")
 
 #子项目
-add_subdirectory(hello)
-add_subdirectory(world)
 add_subdirectory(main)
+add_subdirectory(widget)
 
 
