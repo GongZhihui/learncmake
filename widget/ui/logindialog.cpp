@@ -1,6 +1,6 @@
 #include "logindialog.h"
 
-LoginDialog::LoginDialog(QDialog *p)
+LoginDialog::LoginDialog(QDialog* p)
     : QDialog{ p }
 {
 
