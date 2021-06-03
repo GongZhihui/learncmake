@@ -15,7 +15,12 @@ set(INSTALL_BIN_PATH ${CMAKE_CURRENT_SOURCE_DIR}/bin)
 set(CMAKE_DEBUG_POSTFIX "d")
 
 #子项目
-add_subdirectory(main)
+add_subdirectory(helloworld)
 add_subdirectory(widget)
+
+#创建项目分类文件夹
+SET_PROPERTY(GLOBAL PROPERTY USE_FOLDERS ON)
+set_target_properties(widget PROPERTIES FOLDER widget)
+set_target_properties(helloworld PROPERTIES FOLDER hello/world)
 
 
