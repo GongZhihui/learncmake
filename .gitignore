@@ -34,3 +34,4 @@
 /build
 /.vscode
 /vs2019_build
+/target/bin/Debug

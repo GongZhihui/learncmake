@@ -14,6 +14,8 @@ source_group_by_dir(CUR_DIRS)
 set(EXECUTABLE_OUTPUT_PATH ${INSTALL_BIN_PATH})
 add_executable(widget WIN32 ${CUR_DIRS})
 
+set_target_properties(widget PROPERTIES OUTPUT_NAME "widget-rename")
+
 find_package(Qt5
     COMPONENTS
     core 
