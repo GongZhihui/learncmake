@@ -21,3 +21,10 @@ macro(find_cur_all_files CUR_DIR)
     "*.hpp" "*.ipp" "*.cc" "*.ui" "*.qrc" "*.md")
 
 endmacro(find_cur_all_files)
+
+# 生成exe
+macro(create_exe TARGET_NAME CUR_DIR)
+    add_executable(${TARGET_NAME} WIN32 ${CUR_DIRS})
+    set_target_properties(${TARGET_NAME} PROPERTIES OUTPUT_NAME lib${TARGET_NAME}_h)
+    set_target_properties(${TARGET_NAME} PROPERTIES DEBUG_POSTFIX "_d") 
+endmacro(create_exe)

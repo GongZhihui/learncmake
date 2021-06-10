@@ -1,4 +1,5 @@
 # 动态库
+project(widget)
 
 include(../qtconfig.cmake)
 include(../module.cmake)
@@ -11,10 +12,10 @@ source_group_by_dir(CUR_DIRS)
 #link_directories()
 #link_libraries()
 
-set(EXECUTABLE_OUTPUT_PATH ${INSTALL_BIN_PATH})
-add_executable(widget WIN32 ${CUR_DIRS})
-
-set_target_properties(widget PROPERTIES OUTPUT_NAME "widget-rename")
+# add_executable(${PROJECT_NAME} WIN32 ${CUR_DIRS})
+# set_target_properties(${PROJECT_NAME} PROPERTIES OUTPUT_NAME lib${PROJECT_NAME}_h)
+# set_target_properties(${PROJECT_NAME} PROPERTIES DEBUG_POSTFIX "_d") 
+create_exe(${PROJECT_NAME} ${CUR_DIRS})
 
 find_package(Qt5
     COMPONENTS
@@ -24,7 +25,7 @@ find_package(Qt5
     REQUIRED
 )
 
-target_link_libraries(widget PRIVATE
+target_link_libraries(${PROJECT_NAME}  PRIVATE
     Qt5::Core 
     Qt5::Gui 
     Qt5::Widgets 
