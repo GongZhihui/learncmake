@@ -9,6 +9,11 @@ include_directories(.)
 find_cur_all_files(CUR_DIRS)
 source_group_by_dir(CUR_DIRS)
 
+# 排除单个文件
+#list(REMOVE_ITEM CUR_DIRS 
+#    ${PROJECT_ROOT_DIR}/xxxx.cpp
+#)
+
 #link_directories()
 #link_libraries()
 
@@ -24,6 +29,13 @@ find_package(Qt5
     widgets
     REQUIRED
 )
+
+# 对应vs中项目依赖
+# add_dependencies(
+#     ${PROJECT_NAME}
+#     other_project_name
+#     other_project_name
+# )
 
 target_link_libraries(${PROJECT_NAME}  PRIVATE
     Qt5::Core 
