@@ -20,6 +20,9 @@ source_group_by_dir(CUR_DIRS)
 # add_executable(${PROJECT_NAME} WIN32 ${CUR_DIRS})
 # set_target_properties(${PROJECT_NAME} PROPERTIES OUTPUT_NAME lib${PROJECT_NAME}_h)
 # set_target_properties(${PROJECT_NAME} PROPERTIES DEBUG_POSTFIX "_d") 
+
+#set_target_properties(${PROJECT_NAME} PROPERTIES LINK_FLAG_RELEASE "/DEBUG")
+
 create_exe(${PROJECT_NAME} ${CUR_DIRS})
 
 find_package(Qt5

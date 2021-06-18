@@ -1,10 +1,14 @@
 #pragma once
 
-#include <QDialog>
+#include <QtWidgets>
+#include "userdialog.h"
+#include "ui_LoginDialog.h"
 
-class LoginDialog : public QDialog
+class LoginDialog : public UserDialog
 {
 public:
-    LoginDialog(QDialog *p = nullptr);
+    LoginDialog(QWidget *p = nullptr);
 
+private:
+    Ui::LoginDialog ui;
 };
