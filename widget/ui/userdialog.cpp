@@ -1,7 +1,9 @@
 #include "userdialog.h"
+#include "resizehandler.h"
 
 UserDialog::UserDialog(QWidget* p)
     : QDialog(p, Qt::FramelessWindowHint)
+    , resizeHandler_{ new ResizeHandler{ this } }
 {
     ui.setupUi(this);
 }

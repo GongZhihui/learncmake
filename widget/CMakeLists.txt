@@ -6,7 +6,10 @@ include(../module.cmake)
 
 include_directories(.)
 
+# 获取当前目录下的所有文件，放到CUR_DIRS中
 find_cur_all_files(CUR_DIRS)
+
+# 将CUR_DIRS中的文件按照目录归类
 source_group_by_dir(CUR_DIRS)
 
 # 排除单个文件
@@ -14,7 +17,10 @@ source_group_by_dir(CUR_DIRS)
 #    ${PROJECT_ROOT_DIR}/xxxx.cpp
 #)
 
+#设置连接库目录
 #link_directories()
+
+# 设置连接库名
 #link_libraries()
 
 # add_executable(${PROJECT_NAME} WIN32 ${CUR_DIRS})
@@ -40,6 +46,7 @@ find_package(Qt5
 #     other_project_name
 # )
 
+# 同link_libraries，但必须在add_executable，add_library之后
 target_link_libraries(${PROJECT_NAME}  PRIVATE
     Qt5::Core 
     Qt5::Gui 

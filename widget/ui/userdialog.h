@@ -4,6 +4,7 @@
 
 #define FromASCII(s) QString::fromLocal8Bit(s)
 
+class ResizeHandler;
 class UserDialog : public QDialog 
 {
 public:
@@ -14,4 +15,5 @@ public:
 
 private:
     Ui::UserDialog ui;
+    ResizeHandler* resizeHandler_;
 };
