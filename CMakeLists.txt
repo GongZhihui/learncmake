@@ -38,6 +38,6 @@ add_subdirectory(widget)
 #创建项目分类文件夹
 SET_PROPERTY(GLOBAL PROPERTY USE_FOLDERS ON)
 #set_target_properties(widget PROPERTIES FOLDER widget)
-set_target_properties(helloworld PROPERTIES FOLDER hello/world)
+#set_target_properties(helloworld PROPERTIES FOLDER hello/world)
 
 

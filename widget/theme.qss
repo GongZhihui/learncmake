@@ -1,0 +1,162 @@
+QWidget{
+    background-color: rgb(0, 0, 0);
+    border-color: #444c4c;
+    color: #002f86;
+    font-family: "Microsoft YaHei UI";
+}
+
+QWidget:focus{
+    outline: none;
+}
+
+QLabel{
+    text-align: right;
+    font: normal 16px;
+    color: #bddcff;
+    background: transparent;
+}
+
+QLabel:disabled{
+    color: rgb(101, 101, 101);
+}
+
+QPushButton{
+    background-color: rgba(0, 58, 133, 255); 
+    color: #e3f0ff;
+    font: bold 16px;
+    border-radius: 0px;
+    border: 1px solid #005595;
+    width: 72px;
+    min-height: 24px; 
+}
+
+QPushButton:hover{
+    background-color: #b27100;
+    color:#ffffffff;
+    border:1px solid #e58f00;
+    font-size: 16px;
+}
+
+QPushButton:disabled{
+    background-color: #1e334b;
+    border: 1px solid #355170;
+    font-size: 16px;
+    color: #677d95;
+}
+
+QLineEdit{
+    background-color: rgba(0, 5, 12, 179);
+    padding-left: 5px;
+    color: #bddcff;
+    min-height: 26px;
+    max-height: 26px;
+    border: 1px solid #1657a7;
+}
+
+QLineEdit:focus{
+    border: 1px solid #db8b00;
+    color: #fffffffe;
+}
+
+QLineEdit:disabled{
+    border: 1px solid #3d4f6a;
+    background-color: #181d26;
+    color: #67788c;
+}
+
+QRadioButton{
+    font-size: 14px;
+    color: #bddcff;
+    background: transparent;
+}
+
+QRadioButton:hover{
+    color: #bddcff;
+}
+
+QCheckBox{
+    font-size: 14px;
+    color: #bddcff;
+    background-color: transparent;
+}
+
+QCheckBox:hover{
+}
+
+QCheckBox:disabled{
+    color: rgb(101, 101, 101);
+}
+
+QComboBxo{
+    min-height: 26px;
+    max-height: 26px;
+    padding-left: 5px;
+    background-color: rgba(0, 5, 12, 178);
+    border: 1px solid #1657a7;
+    font: normal 16px;
+    color: #bddcff;
+}
+
+QScrollBar{
+    border: 0px;
+    background: transparent;
+}
+
+QScrollBar::handle{
+    background-color: #1d4e8f;
+    border-radius: 3px;
+}
+
+QScrollBar::handle:hover{
+    background-color: #2f75d2;
+    border-radius: 3px;
+}
+
+QScrollBar::vertical{
+    width: 14px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 4px;
+    padding-right: 4px;
+    border: 0px;
+    margin: 0px, 0px, 0px, 0px;
+    background-color: #00060e;
+}
+
+QGroupBox{
+    border-radius: 0px;
+    font-size: 14px;
+    border: 1px solid #114484;
+    margin-top: 3px;
+    background-color: rgba(8, 14, 23, 204);
+}
+
+QGroupBox::title{
+    color: #eff7ff;
+    subcontrol-origin: margin;
+    left: 18px;
+}
+
+QGroupBox::indicator:unchecked{
+    image: url();
+}
+
+QGroupBox::indicator:checked{
+    image: url();
+}
+
+QGroupBox::indicator:unchecked:hover{
+    image: url();
+}
+
+QGroupBox::indicator:checked:hover{
+    image: url();
+}
+
+QGroupBox::indicator:unchecked:disabled{
+    image: url();
+}
+
+QGroupBox::indicator:checked:disabled{
+    image: url();
+}
